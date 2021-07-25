@@ -12,9 +12,6 @@ var main = {
             content: $('#content').val()
         };
 
-        console.log('data');
-        console.log(data);
-
         $.ajax({
         type: 'POST',
         url: '/api/v1/posts',
@@ -25,9 +22,9 @@ var main = {
             alert('글이 등록되었습니다');
             window.location.href='/';
         }).fail(function (err) {
-            alert(JSON.stringify(error);
-        )});
-    }
-}
+            alert(JSON.stringify(error));
+        });
+    }x``
+};
 
 main.init();

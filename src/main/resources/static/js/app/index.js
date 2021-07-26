@@ -24,7 +24,7 @@ var main = {
         }).fail(function (err) {
             alert(JSON.stringify(error));
         });
-    }x``
+    }
 };
 
 main.init();

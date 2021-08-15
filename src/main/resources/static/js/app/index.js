@@ -30,7 +30,7 @@ var main = {
             alert('글이 등록되었습니다');
             window.location.href='/';
         }).fail(function (err) {
-            alert(JSON.stringify(error));
+            alert(JSON.stringify(err));
         });
     },
     update: function() {

@@ -26,9 +26,10 @@ public class OAuthAttributes {
 
     /**
      * OAuth2User 에서 반환하는 사용자 정보는 Map 이기 때문에 변환해주는 메소드
+     *
      * @param registrationId
      * @param userNameAttributeName : OAuth2 로그인 진행시 키가 되는 필드 값
-     * @param attributes : 소셜 로그인한 사용자 정보
+     * @param attributes            : 소셜 로그인한 사용자 정보
      * @return
      */
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
@@ -47,6 +48,7 @@ public class OAuthAttributes {
 
     /**
      * User 엔티티 생성
+     *
      * @return
      */
     public User toEntity() {

@@ -25,7 +25,7 @@ public class PostApiController {
     }
 
     @GetMapping("/{id}")
-    public PostResponseDto findById(@PathVariable Long id){
+    public PostResponseDto findById(@PathVariable Long id) {
         return postsService.findById(id);
     }
 

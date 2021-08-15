@@ -51,7 +51,7 @@ public class PostApiControllerTest {
                 .author("author")
                 .build();
 
-        String url = "http://localhost:"+port+"/api/v1/posts";
+        String url = "http://localhost:" + port + "/api/v1/posts";
 
         // url, request, response
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, postsSaveRequestDto, Long.class);
@@ -68,10 +68,10 @@ public class PostApiControllerTest {
     public void Posts_수정된다() {
         Posts posts = postsRepository.save(
                 Posts.builder()
-                .title("title")
-                .content("content")
-                .author("author")
-                .build());
+                        .title("title")
+                        .content("content")
+                        .author("author")
+                        .build());
 
         Long updateId = posts.getId();
         String expectedTitle = "title2";
@@ -82,7 +82,7 @@ public class PostApiControllerTest {
                 .content(expectedContent)
                 .build();
 
-        String url = "http://localhost:"+port+"/api/v1/posts/"+updateId;
+        String url = "http://localhost:" + port + "/api/v1/posts/" + updateId;
 
         HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
         ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);

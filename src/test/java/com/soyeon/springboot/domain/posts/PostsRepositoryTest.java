@@ -1,6 +1,5 @@
 package com.soyeon.springboot.domain.posts;
 
-import lombok.RequiredArgsConstructor;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,15 +47,15 @@ public class PostsRepositoryTest {
     public void BaseTimeEntity_등록() {
         LocalDateTime now = LocalDateTime.of(2021, 7, 24, 9, 52, 0);
         postsRepository.save(Posts.builder()
-        .title("title")
-        .content("content")
-        .author("author")
-        .build());
+                .title("title")
+                .content("content")
+                .author("author")
+                .build());
 
         List<Posts> postsList = postsRepository.findAll();
 
         Posts posts = postsList.get(0);
-        System.out.println(">>>>>>> createdDate: "+posts.getCreatedDate()+", modifiedDate : "+posts.getModifiedDate());
+        System.out.println(">>>>>>> createdDate: " + posts.getCreatedDate() + ", modifiedDate : " + posts.getModifiedDate());
         assertThat(posts.getCreatedDate()).isBefore(LocalDateTime.now());
         assertThat(posts.getModifiedDate()).isBefore(LocalDateTime.now());
     }

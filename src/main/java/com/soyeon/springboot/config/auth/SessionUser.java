@@ -1,9 +1,11 @@
 package com.soyeon.springboot.config.auth;
 
 import com.soyeon.springboot.domain.user.User;
+import lombok.Getter;
 
 import java.io.Serializable;
 
+@Getter
 public class SessionUser implements Serializable {
     private String name;
     private String email;

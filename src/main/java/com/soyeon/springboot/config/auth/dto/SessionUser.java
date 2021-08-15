@@ -1,4 +1,4 @@
-package com.soyeon.springboot.config.auth;
+package com.soyeon.springboot.config.auth.dto;
 
 import com.soyeon.springboot.domain.user.User;
 import lombok.Getter;
